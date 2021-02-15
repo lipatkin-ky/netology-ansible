@@ -13,6 +13,7 @@
 
 # Ответы на вопросы
 
+
 1.   
 ```bash
 ansible-playbook -i inventory/test.yml site.yml
@@ -38,8 +39,8 @@ localhost                  : ok=3    changed=0    unreachable=0    failed=0    s
 ```
 ответ: 12
 
-2.   
 
+2.   
 ```bash
 ansible-playbook -i inventory/test.yml site.yml                                                                                                                  
 
@@ -64,6 +65,7 @@ PLAY RECAP *********************************************************************
 localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 ответ: нужно изменить значение переменной в файле `group_vars/all/examp.yml`
+
 
 3,4.
 ```bash
@@ -97,6 +99,7 @@ ubuntu                     : ok=3    changed=0    unreachable=0    failed=0    s
 ```
 ответ: el deb
 
+
 5,6
 ```bash 
 ansible-playbook -i inventory/prod.yml site.yml -u root  
@@ -128,6 +131,7 @@ centos7                    : ok=3    changed=0    unreachable=0    failed=0    s
 ubuntu                     : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 ответ: нужно изменить значения переменных в файлах `group_vars/dev/examp.yml` и `group_vars/el/examp.yml` соответственно
+
 
 7,8
 ```bash
@@ -177,12 +181,13 @@ $ANSIBLE_VAULT;1.1;AES256
 66356462633831333030373332636661623066613937626231663138366535643535656633303938
 6530366631313466373035323836613135623763383161353464
 ```
+
 9. 
 ```bash
 ansible-doc plugin -l | grep -i macos
 osx_defaults                                                  Manage macOS user defaults
 ```
-не совсем понятно задание!   
+
 10,11
 ```bash
 ansible-playbook -i inventory/prod.yml site.yml -u root
