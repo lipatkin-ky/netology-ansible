@@ -1,22 +1,21 @@
 # ELK playbook
-
 Устанавливает Java
 Устанавливает и настараивает elasticsearch и kibana
 
-## Запуск:
 
+## Запуск:
 ```bash
 ansible-playbook -i inventory/prod.yml site.yml
 ```
-## Используемые тэги:
 
+
+## Используемые тэги:
  - java - установить только Java
  - elastic - установить только Elastic
  - kibana - установить только Kibana
 
 
 ## Переменные:
-
 | Название        | Значение по умолчанию           | Описание  |
 | ------------- |:-------------:| -----:|
 | java_jdk_version      | 8u281 | Версия Java |
